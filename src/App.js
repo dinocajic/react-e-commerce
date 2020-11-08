@@ -1,9 +1,12 @@
 import './App.css';
+import Header from './components/layout/Header';
 
 function App() {
   return (
     <div className="app">
-      <h1>E-Commerce App</h1>
+      <Header />
+      {/* Home */}
+
     </div>
   );
 }
