@@ -3,6 +3,8 @@ import './Home.css';
 
 import Banner from './img/banner.jpg';
 
+import Product from '../Product/Product';
+
 function Home() {
     return (
         <div className='home'>
@@ -12,18 +14,21 @@ function Home() {
                     alt='Home Banner' 
                     class='home_image'
                 />
-            </div>
 
-            <div className='home_row'>
-                
-            </div>
+                <div className='home_row'>
+                    <Product />
+                    <Product />
+                </div>
 
-            <div className='home_row'>
+                <div className='home_row'>
+                    <Product />
+                    <Product />
+                    <Product />
+                </div>
 
-            </div>
-
-            <div className='home_row'>
-                
+                <div className='home_row'>
+                    <Product />
+                </div>
             </div>
         </div>
     )
