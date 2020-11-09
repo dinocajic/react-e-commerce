@@ -25,6 +25,10 @@
     width: 100%;
 }
 
+.product_title {
+    font-weight: 700;
+}
+
 .product_price {
     margin-top: 5px;
 }
