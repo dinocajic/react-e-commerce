@@ -22,3 +22,6 @@ The applications shows an E-Commerce application written in React.js
 
 ## react-router-dom
 - Run the command ```npm install react-router-dom```
+
+## react-currency-format
+- Run the command ```npm install react-currency-format```
