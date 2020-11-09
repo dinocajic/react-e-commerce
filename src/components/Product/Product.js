@@ -2,34 +2,29 @@ import React from 'react'
 import './Product.css';
 import Button from '@material-ui/core/Button';
 
-import AlgorithmsBook from '../../assets/img/books/an-illustrative-introduction-to-algorithms.jpg';
-
-function Product() {
+function Product({title, author, description, image, price, rating}) {
     return (
         <div className='product'>
             <div className='product_info'>
-                <p>
-                    This book was written to fill the gap that exists when Computer Science students, and programmers, 
-                    attempt to learn and analyze the different algorithms that currently exist.
-                </p>
+                <p className='product_title'>{title.substr(0, 50)}</p>
+
+                <p>{description.substr(0, 110)}</p>
+
                 <p className='product_price'>
                     <small>$</small>
-                    <strong>49.99</strong>
+                    <strong>{price}</strong>
                 </p>
 
                 <div className='product_rating'>
-                    <p>⭐</p>
-                    <p>⭐</p>
-                    <p>⭐</p>
-                    <p>⭐</p>
-                    <p>⭐</p>
+                    {
+                        Array(rating).fill().map((_, i) => (
+                            <p>⭐</p>
+                        ))
+                    }
                 </div>
             </div>
 
-            <img 
-                src={AlgorithmsBook} 
-                alt='An Illustrative Introduction to Algorithms by Dino Cajic' 
-            />
+            <img src={image} alt={title + ' by ' + author} />
 
             <Button variant='outlined' color='primary' size='large'>
                 Add to Cart
