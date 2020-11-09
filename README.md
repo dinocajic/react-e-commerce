@@ -19,3 +19,6 @@ The applications shows an E-Commerce application written in React.js
 - Visit materia-ui.com
 - To install, run ```npm install @material-ui/core```
 - Run the command ```npm install @material-ui/icons```
+
+## react-router-dom
+- Run the command ```npm install react-router-dom```
