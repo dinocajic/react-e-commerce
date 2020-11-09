@@ -6,7 +6,7 @@ function Product({title, author, description, image, price, rating}) {
     return (
         <div className='product'>
             <div className='product_info'>
-                <p className='product_title'>{title.substr(0, 50)}</p>
+                <p className='product_title'>{title.substr(0, 45)}</p>
 
                 <p>{description.substr(0, 110)}</p>
 
