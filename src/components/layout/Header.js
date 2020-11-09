@@ -1,6 +1,5 @@
 import React from 'react';
 import './Header.css';
-import Logo from '../../assets/img/Logo.png';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
@@ -9,7 +8,7 @@ function Header() {
         <div className='header'>
             <img 
                 className='header_logo' 
-                src={Logo} 
+                src='img/logo.png'
                 alt='E-Commerce Logo'
             />
 
