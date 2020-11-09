@@ -77,6 +77,16 @@ function Home() {
                         image='https://images-na.ssl-images-amazon.com/images/I/41Lugv4F3YL._SX415_BO1,204,203,200_.jpg' 
                         rating={5}
                     />
+
+                    <Product
+                        id='34566754234'
+                        title='Algorithms Are Not Enough: Creating General Artificial Intelligence' 
+                        author='Herbert L. Roitblat'
+                        description='Since the inception of artificial intelligence, we have been warned about the imminent arrival of computational systems that can replicate human thought processes.'
+                        price={35.00}
+                        image='https://images-na.ssl-images-amazon.com/images/I/41jhEFhboCL._SX336_BO1,204,203,200_.jpg' 
+                        rating={4}
+                    />
                 </div>
             </div>
         </div>
