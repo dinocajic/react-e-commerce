@@ -1,8 +1,29 @@
 import React from 'react'
 import './Product.css';
 import Button from '@material-ui/core/Button';
+import { useStateValue } from '../../StateProvider';
 
-function Product({title, author, description, image, price, rating}) {
+function Product({id, title, author, description, image, price, rating}) {
+
+    // [state, dispatch]
+    const [{cart}, dispatch] = useStateValue();
+
+    console.log('Cart Content: ', cart);
+
+    // Dispatch the item into the Data Layer
+    const addToCart = () => {
+        dispatch({
+            type: 'ADD_TO_CART',
+            item: {
+                id: id,
+                title: title,
+                image: image,
+                price: price,
+                rating: rating,
+            }
+        });
+    };
+
     return (
         <div className='product'>
             <div className='product_info'>
@@ -18,7 +39,7 @@ function Product({title, author, description, image, price, rating}) {
                 <div className='product_rating'>
                     {
                         Array(rating).fill().map((_, i) => (
-                            <p>⭐</p>
+                            <p key={i}>⭐</p>
                         ))
                     }
                 </div>
@@ -26,7 +47,12 @@ function Product({title, author, description, image, price, rating}) {
 
             <img src={image} alt={title + ' by ' + author} />
 
-            <Button variant='outlined' color='primary' size='large'>
+            <Button 
+                variant='outlined' 
+                color='primary' 
+                size='large'
+                onClick={addToCart}
+            >
                 Add to Cart
             </Button>
         </div>

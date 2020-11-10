@@ -10,7 +10,7 @@ function Home() {
                 <img 
                     src='img/home/banner.jpg'
                     alt='Home Banner' 
-                    class='home_image'
+                    className='home_image'
                 />
 
                 <div className='home_row'>
