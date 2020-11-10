@@ -7,7 +7,7 @@ export const initialState = {
 // action - what are you trying to do? add to cart? remove from cart?
 const reducer = (state, action) => {
 
-    console.log(action);
+    console.log(action); // @todo remove
 
     switch(action.type) {
         case 'ADD_TO_CART':
