@@ -38,6 +38,9 @@ https://e-commerce-9961f.web.app/
     - ```npm install cors```
     - ```npm install stripe```
 
+## Firestore
+- Create a cloud firestore database
+
 ## Materia UI
 - Visit materia-ui.com
 - To install, run ```npm install @material-ui/core```
@@ -65,3 +68,6 @@ https://e-commerce-9961f.web.app/
 
 ## Axios
 - Run the command ```npm install axios```
+
+## Moment (Passing Timestamps)
+- Run the command ```npm install moment```
