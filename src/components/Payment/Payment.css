@@ -2,20 +2,26 @@
     background-color: white;
 }
 
-.payment_container {
-    
-}
-
 .payment_container > h1 {
     text-align: center;
-    background-color: lightgray;
+    background-color: #464646;
     padding: 20px;
-    font-weight: 600;
+    font-weight: 500;
     border-bottom: 1px solid gray;
+    color: white;
 }
 
 .payment_container > h1 a {
     text-decoration: none;
+}
+
+.payment_container > h1 a:hover {
+    font-weight: bolder;
+}
+
+.payment_container > h1 a:visited {
+    text-decoration: none;
+    color: white;
 }
 
 .payment_section {
