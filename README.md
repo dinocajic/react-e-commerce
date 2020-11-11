@@ -26,6 +26,18 @@ https://e-commerce-9961f.web.app/
   - Configure as a single-page app (rewrite all urls to /index.html)? (y/N): ```y```
   - Set up automatic builds and deploys with GitHub? (y/N): ```N```
 
+## Cloud Functions
+  - Run the command ```firebase init```
+  - Are you ready to proceed ```Y```
+  - Select (with Spacebar): ```Functions: Configure and deploy Cloud Functions```
+  - What language would you like to use to write Clound Functions (Use arrow keys): ```JavaScript```
+  - Do you wnat to use ESLint to catch probable bugs and enforce style? (y/N): ```y```
+  - Do you want to install dependencies with npm now? (Y/n): ```Y```
+  - Inside of your functions folder, run the following commands
+    - ```npm install express```
+    - ```npm install cors```
+    - ```npm install stripe```
+
 ## Materia UI
 - Visit materia-ui.com
 - To install, run ```npm install @material-ui/core```
@@ -44,3 +56,12 @@ https://e-commerce-9961f.web.app/
 - Every time that you make a change, you will have to rerun the commands:
   - ```npm run build```
   - ```firebase deploy```
+
+## Stripe (CC Processing)
+- If you haven't already, upgrade Firebase to Blaze account
+- Run the command ```npm install @stripe/stripe-js```
+- Run the command ```npm install @stripe/react-stripe-js```
+- Create Stripe Account
+
+## Axios
+- Run the command ```npm install axios```

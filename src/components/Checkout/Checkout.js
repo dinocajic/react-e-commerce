@@ -29,6 +29,7 @@ function Checkout() {
                     {
                         cart.map((item) => (
                             <CheckoutProduct 
+                                key={item.id}
                                 id={item.id}
                                 image={item.image}
                                 title={item.title}

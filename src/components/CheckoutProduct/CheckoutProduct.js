@@ -30,7 +30,7 @@ function CheckoutProduct({id, title, image, price, rating}) {
                     <strong>{price}</strong>
                 </p>
 
-                <p className='checkoutProduct_rating'>
+                <div className='checkoutProduct_rating'>
                     {
                         Array(rating)
                             .fill()
@@ -38,7 +38,7 @@ function CheckoutProduct({id, title, image, price, rating}) {
                                 <p key={i}>⭐</p>
                             ))
                     }
-                </p>
+                </div>
 
                 <Button 
                     variant='outlined' 
