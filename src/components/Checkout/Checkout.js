@@ -7,7 +7,7 @@ import { useStateValue } from '../../StateProvider';
 
 function Checkout() {
 
-    const [{cart}, dispatch] = useStateValue();
+    const [{cart, user}, dispatch] = useStateValue();
 
     return (
         <React.Fragment>
@@ -21,6 +21,7 @@ function Checkout() {
                 />
                 
                 <div>
+                    <h3>{user && ('Hello ' + user.email)}</h3>
                     <h2 className='checkout_title'>
                         Your Cart
                     </h2>
