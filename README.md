@@ -14,6 +14,15 @@ The applications shows an E-Commerce application written in React.js
 - Under Your Apps section, click Config to copy the configuration settings
 - Create /src/firebase.js file and paste the config settings in there. They should be similar to /src/firebase.example.js
 - Run the command: ```npm install -g firebase-tools```
+- Login with the command: ```firebase login```
+- Run the command: ```firebase init```
+  - Are you ready to proceed? (Y/n): ```Y```
+  - Select (with Spacebar): ```Hosting: Configure and deploy Firebase Hosting sites```
+  - Select (with Spacebar): ```Use an existing Project```
+  - Select your firebase project that you setup
+  - What do you want to use as your public directory (public): ```build```
+  - Configure as a single-page app (rewrite all urls to /index.html)? (y/N): ```y```
+  - Set up automatic builds and deploys with GitHub? (y/N): ```N```
 
 ## Materia UI
 - Visit materia-ui.com
