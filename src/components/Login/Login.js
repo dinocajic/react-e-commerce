@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { Button } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './Login.css';
 
+import { auth } from '../../firebase';
+
 function Login() {
+
+    const history = useHistory();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -11,15 +14,22 @@ function Login() {
     const signIn = e => {
         e.preventDefault();
 
-        // Firebase Login
-        console.log(email);
+        auth.signInWithEmailAndPassword(email, password)
+            .then(auth => history.push('/'))
+            .catch(error => alert(error.message));
     };
 
     const register = e => {
         e.preventDefault();
 
-        // Firebase Register
-        console.log(email);
+        auth.createUserWithEmailAndPassword(email, password)
+            .then((auth) => {
+                console.log(auth);
+                if ( auth ) {
+                    history.push('/');
+                }
+            })
+            .catch(error => alert(error.message));
     };
 
     return (
@@ -52,15 +62,13 @@ function Login() {
                         onChange={e => setPassword(e.target.value)}
                     />
 
-                    <Button 
-                        variant='outlined' 
-                        color='primary' 
-                        size='large' 
+                    <button 
                         type='submit'
+                        className='login_registerButton'
                         onClick={signIn}
                     >
                         Sign In
-                    </Button>
+                    </button>
                 </form>
 
                 <p>
