@@ -135,7 +135,7 @@ function Payment() {
                                 <CurrencyFormat 
                                     renderText={(value) => (
                                         <>
-                                            <h3>Order Total: {value}</h3>
+                                            <h3 className='payment_orderTotal'>Order Total: {value}</h3>
                                         </>
                                     )}
                                     decimalScale={2}

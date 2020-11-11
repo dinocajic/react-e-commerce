@@ -39,3 +39,21 @@
 .payment_address, .payment_items, .payment_details {
     flex: 0.8;
 }
+
+.payment_details > form {
+    max-width: 350px;
+}
+
+.payment_orderTotal {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.payment_details > form > div > button {
+    background: #f0c14b;
+    width: 100%;
+    height: 50px;
+    font-weight: bolder;
+    margin-top: 10px;
+    color: #111;
+}
