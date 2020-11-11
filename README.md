@@ -38,6 +38,10 @@ https://e-commerce-9961f.web.app/
     - ```npm install cors```
     - ```npm install stripe```
 
+## Cloud Functions
+- To deploy firebase functions (inside of functions folder) run the following command:
+  - ```firebase deploy --only functions```
+
 ## Firestore
 - Create a cloud firestore database
 
@@ -58,7 +62,8 @@ https://e-commerce-9961f.web.app/
 - Run the command: ```firebase deploy```
 - Every time that you make a change, you will have to rerun the commands:
   - ```npm run build```
-  - ```firebase deploy```
+  - ```firebase deploy``` the first time
+  - ```firebase deploy --only hosting``` after backend (functions) deployed
 
 ## Stripe (CC Processing)
 - If you haven't already, upgrade Firebase to Blaze account
