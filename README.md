@@ -34,3 +34,11 @@ The applications shows an E-Commerce application written in React.js
 
 ## react-currency-format
 - Run the command ```npm install react-currency-format```
+
+## Deployment
+- After the Firebase configuration has been setup, run the command: ```npm run build```
+  - This creates an optimized production build
+- Run the command: ```firebase deploy```
+- Every time that you make a change, you will have to rerun the commands:
+  - ```npm run build```
+  - ```firebase deploy```
