@@ -54,6 +54,10 @@ function Payment() {
             setError(null);
             setProcessing(false);
 
+            dispatch({
+                type: 'EMPTY_CART'
+            })
+
             // Replace instead of push since you don't want them to come back to the payment page
             history.replace('/orders');
         })
