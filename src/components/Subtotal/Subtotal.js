@@ -4,8 +4,11 @@ import CurrencyFormat from 'react-currency-format';
 import { Button } from '@material-ui/core';
 import { useStateValue } from '../../StateProvider';
 import { getCartTotal } from '../../reducer';
+import { useHistory } from 'react-router-dom';
 
 function Subtotal() {
+    const history = useHistory();
+
     const [{cart}, dispatch] = useStateValue();
 
     return (
@@ -29,7 +32,12 @@ function Subtotal() {
                 prefix={"$"}
             />
 
-            <Button variant='outlined' color='primary' size='small'>
+            <Button 
+                variant='outlined' 
+                color='primary' 
+                size='small' 
+                onClick={e => history.push('/payment')}
+            >
                 Proceed to Checkout
             </Button>
         </div>
