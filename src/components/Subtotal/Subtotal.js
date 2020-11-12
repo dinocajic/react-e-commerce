@@ -33,7 +33,8 @@ function Subtotal() {
             />
 
             <Button 
-                variant='outlined' 
+                className='subtotal_proceedToCheckoutButton'
+                variant='contained' 
                 color='primary' 
                 size='small' 
                 onClick={e => history.push('/payment')}
