@@ -7,13 +7,15 @@ function Home() {
     return (
         <div className='home'>
             <div className='home_container'>
-                <img 
-                    src='img/home/banner.jpg'
-                    alt='Home Banner' 
-                    className='home_image'
-                />
+                <div className='row'>
+                    <img 
+                        src='img/home/banner.jpg'
+                        alt='Home Banner' 
+                        className='home_image'
+                    />
+                </div>
 
-                <div className='home_row'>
+                <div className='row mx-auto justify-content-center'>
                     <Product
                         id='12577245'
                         title='An Illustrative Introduction to Algorithms' 
@@ -23,6 +25,7 @@ function Home() {
                         image='img/books/an-illustrative-introduction-to-algorithms.jpg' 
                         rating={5}
                     />
+                    
                     <Product
                         id='32355155'
                         title='Introduction to Algorithms, 3rd Edition' 
@@ -32,9 +35,7 @@ function Home() {
                         image='https://images-na.ssl-images-amazon.com/images/I/41T0iBxY8FL._SX258_BO1,204,203,200_.jpg' 
                         rating={4}
                     />
-                </div>
 
-                <div className='home_row'>
                     <Product
                         id='233656734'
                         title='Algorithms (4th Edition)' 
@@ -65,9 +66,6 @@ function Home() {
                         rating={4}
                     />
                     
-                </div>
-
-                <div className='home_row'>
                     <Product
                         id='1356754234'
                         title='A Common-Sense Guide to Data Structures and Algorithms, Second Edition: Level Up Your Core Programming Skills' 
