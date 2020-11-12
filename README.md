@@ -76,3 +76,7 @@ https://e-commerce-9961f.web.app/
 
 ## Moment (Passing Timestamps)
 - Run the command ```npm install moment```
+
+## Bootstrap
+- Run the command ```npm install react-bootstrap bootstrap```
+- Add boostrap CDN to App.js

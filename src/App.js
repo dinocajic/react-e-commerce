@@ -1,18 +1,20 @@
 import React, { useEffect } from 'react';
 
 import './App.css';
-import Header from './components/Layout/Header';
 import Home from './components/Home/Home';
 import Checkout from './components/Checkout/Checkout';
 import Login from './components/Login/Login';
 import Payment from './components/Payment/Payment';
 import Orders from './components/Orders/Orders';
+import Navigation from './components/Layout/Navigation/Navigation';
 
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import { auth } from './firebase';
 import { useStateValue } from './StateProvider';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const promise = loadStripe('pk_test_51HmLp7JbOxSALtT8cS0NrDJChCKsUG4moKuql2blqcbU4ntB6hrolf4wgRguSPGZVf6DR1ierl4xarr8UaEIL0dp00fHqhf4S6');
 
@@ -48,7 +50,7 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Header />
+        <Navigation />
 
         <Switch>
           <Route path='/' exact><Home /></Route>
@@ -61,6 +63,12 @@ function App() {
           </Route>
           <Route path='/orders'><Orders /></Route>
         </Switch>
+
+        <link
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossOrigin="anonymous"
+        />
         
       </div>
     </Router>
