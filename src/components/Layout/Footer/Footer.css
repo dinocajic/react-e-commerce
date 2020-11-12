@@ -1,0 +1,38 @@
+.footer {
+    margin-top: 20px;
+    color: white;
+}
+
+.footer a {color:#696969;}
+.footer p {color:#696969;}
+.footer ul {line-height:30px;}
+
+.footer_socialIcons > a {
+    color: white;
+}
+
+.footer_socialIcons > a:hover {
+    color: lightgray;
+}
+
+.footer_socialIcon {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer_about {
+    color: lightgray !important;
+}
+
+.list-unstyled > li > a {
+    color: lightgray;
+}
+
+.footer_one, .footer_two, .footer_three, .footer_four, .footer_five {
+    margin-bottom: 20px;
+}
+
+.footer_disclaimer {
+    color: lightslategrey;
+    text-align: center;
+}

@@ -7,6 +7,7 @@ import Login from './components/Login/Login';
 import Payment from './components/Payment/Payment';
 import Orders from './components/Orders/Orders';
 import Navigation from './components/Layout/Navigation/Navigation';
+import Footer from './components/Layout/Footer/Footer';
 
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import { auth } from './firebase';
@@ -63,6 +64,8 @@ function App() {
           </Route>
           <Route path='/orders'><Orders /></Route>
         </Switch>
+
+        <Footer />
 
         <link
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
