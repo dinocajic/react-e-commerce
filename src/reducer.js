@@ -1,6 +1,7 @@
 export const initialState = {
     cart: [],
     user: null,
+    company: 'E-Commerce Store',
 };
 
 export const getCartTotal = (cart) => (
@@ -10,8 +11,6 @@ export const getCartTotal = (cart) => (
 // Reducer states how are we able to displatch the action into the data layer
 // action - what are you trying to do? add to cart? remove from cart?
 const reducer = (state, action) => {
-
-    console.log(action); // @todo remove
 
     switch(action.type) {
         case 'ADD_TO_CART':
@@ -24,34 +23,16 @@ const reducer = (state, action) => {
                 ...state,
                 cart: state.cart.filter(item => item.id !== action.id)
             };
-
-            // If all of the ID's are the same
-            // const index = state.cart.findIndex((cartItem) => cartItem.id === action.id);
-
-            // let newCart = [...state.cart];
-
-            // if (index >= 0) {
-            //     newCart.splice(index, 1);
-            // } else {
-            //     console.warn(`Can't remove product (id: ${action.id}) as it's not in the cart.`)
-            // }
-
-            // return {
-            //     ...state,
-            //     cart: newCart,
-            // }
         case 'SET_USER':
             return {
                 ...state,
                 user: action.user,
             };
-        
         case 'EMPTY_CART':
             return {
                 ...state,
                 cart: []
-            }
-
+            };
         default:
             return state;
     }
